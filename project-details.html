@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details · Shreya.G</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .project-detail {
+            padding: 120px 0 60px;
+        }
+        .project-detail-header {
+            margin-bottom: 40px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            color: var(--primary-light);
+        }
+        .project-detail-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .project-detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: var(--text-muted);
+        }
+        .project-detail-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        .project-detail-image {
+            width: 100%;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        .project-detail-description {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+        .project-features {
+            margin-bottom: 30px;
+        }
+        .project-features h3,
+        .project-tech-detail h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .project-features ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .project-features ul li::before {
+            content: '✓ ';
+            color: var(--primary-light);
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .tech-tags span {
+            padding: 4px 16px;
+            background: rgba(79, 70, 229, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 999px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        .project-detail-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .project-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .sidebar-card {
+            padding: 24px;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+        }
+        .sidebar-card h4 {
+            font-size: 0.875rem;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+        }
+        .sidebar-card .value {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        .sidebar-card .value.success {
+            color: #22c55e;
+        }
+
+        @media (max-width: 768px) {
+            .project-detail-content {
+                grid-template-columns: 1fr;
+            }
+            .project-detail-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header" id="header">
+    <nav class="navbar container">
+        <a href="index.html" class="logo">Shreya.<span>G</span></a>
+        <a href="index.html#projects" class="btn-hire">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+    </nav>
+</header>
+
+<main>
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-detail-header">
+                <a href="index.html#projects" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <h1 class="project-detail-title" id="projectTitle">Personal Portfolio Website</h1>
+                <div class="project-detail-meta">
+                    <span id="projectCategory"><i class="fas fa-tag"></i> Frontend</span>
+                    <span><i class="fas fa-calendar"></i> 2024</span>
+                    <span><i class="fas fa-code"></i> <span id="techCount">3</span> Technologies</span>
+                </div>
+            </div>
+
+            <div class="project-detail-content">
+                <div>
+                    <img src="assets/images/project1.jpg" alt="Project" class="project-detail-image" id="projectImage">
+
+                    <div class="project-detail-description" id="projectDescription">
+                        A modern, responsive portfolio website with smooth animations and a dark theme with glassmorphism effects.
+                    </div>
+
+                    <div class="project-features">
+                        <h3>Key Features</h3>
+                        <ul id="projectFeatures">
+                            <li>Fully responsive design for all devices</li>
+                            <li>Smooth animations and transitions</li>
+                            <li>Dark theme with glassmorphism</li>
+                            <li>Contact form with validation</li>
+                            <li>Typewriter animation effect</li>
+                            <li>Project filtering and details</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tech-detail">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags" id="projectTech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="project-detail-actions">
+                        <a href="#" class="btn-primary" id="demoLink">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/shreyaghimire123" target="_blank" class="btn-secondary" id="githubLink">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h4>Project Info</h4>
+                        <div style="display:flex;flex-direction:column;gap:12px;">
+                            <div>
+                                <span style="color:var(--text-muted);font-size:0.75rem;">Status</span>
+                                <p class="value success">Completed</p>
+                            </div>
+                            <div>
+                                <span style="color:var(--text-muted);font-size:0.75rem;">Role</span>
+                                <p class="value">Frontend Developer</p>
+                            </div>
+                            <div>
+                                <span style="color:var(--text-muted);font-size:0.75rem;">Duration</span>
+                                <p class="value">2 Weeks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h4>Share This Project</h4>
+                        <div style="display:flex;gap:12px;">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=shreyaghimire.com" target="_blank" style="color:var(--text-muted);transition:var(--transition);" onmouseover="this.style.color='#4f46e5'" onmouseout="this.style.color='var(--text-muted)'">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=shreyaghimire.com" target="_blank" style="color:var(--text-muted);transition:var(--transition);" onmouseover="this.style.color='#4f46e5'" onmouseout="this.style.color='var(--text-muted)'">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url=shreyaghimire.com" target="_blank" style="color:var(--text-muted);transition:var(--transition);" onmouseover="this.style.color='#4f46e5'" onmouseout="this.style.color='var(--text-muted)'">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Shreya Ghimire. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Project Data - 3 PROJECTS ONLY
+    const projectData = {
+        1: {
+            title: 'Personal Portfolio Website',
+            category: 'Frontend',
+            description: 'A modern, responsive portfolio website with smooth animations and a dark theme with glassmorphism effects.',
+            features: [
+                'Fully responsive design for all devices',
+                'Smooth animations and transitions',
+                'Dark theme with glassmorphism',
+                'Contact form with validation',
+                'Typewriter animation effect',
+                'Project filtering and details'
+            ],
+            tech: ['HTML5', 'CSS3', 'JavaScript'],
+            github: 'https://github.com/shreyaghimire123',
+            demo: '#',
+            image: 'assets/images/project1.jpg'
+        },
+        2: {
+            title: 'E-Commerce Mobile App Design',
+            category: 'UI/UX Design',
+            description: 'Complete mobile app UI/UX design for an e-commerce platform created in Figma with interactive prototyping.',
+            features: [
+                'User flow and journey mapping',
+                'Wireframing and low-fidelity designs',
+                'High-fidelity UI design',
+                'Interactive prototypes',
+                'Design system and components',
+                'User testing and iteration'
+            ],
+            tech: ['Figma', 'Adobe XD', 'Prototyping'],
+            github: 'https://github.com/shreyaghimire123',
+            demo: '#',
+            image: 'assets/images/project2.jpg'
+        },
+        3: {
+            title: 'Restaurant Landing Page',
+            category: 'Website',
+            description: 'A beautiful restaurant landing page with online menu, reservation system, and gallery section.',
+            features: [
+                'Online menu display',
+                'Table reservation system',
+                'Photo gallery',
+                'Contact form',
+                'Responsive design',
+                'Location map integration'
+            ],
+            tech: ['HTML5', 'CSS3', 'JavaScript'],
+            github: 'https://github.com/shreyaghimire123',
+            demo: '#',
+            image: 'assets/images/project3.jpg'
+        }
+    };
+
+    // Get project ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    if (id && projectData[id]) {
+        const p = projectData[id];
+        document.getElementById('projectTitle').textContent = p.title;
+        document.getElementById('projectCategory').innerHTML = `<i class="fas fa-tag"></i> ${p.category}`;
+        document.getElementById('projectDescription').textContent = p.description;
+        document.getElementById('techCount').textContent = p.tech.length;
+        document.getElementById('projectImage').src = p.image;
+        document.getElementById('demoLink').href = p.demo;
+        document.getElementById('githubLink').href = p.github;
+
+        document.getElementById('projectFeatures').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
+        document.getElementById('projectTech').innerHTML = p.tech.map(t => `<span>${t}</span>`).join('');
+    }
+</script>
+</body>
+</html>

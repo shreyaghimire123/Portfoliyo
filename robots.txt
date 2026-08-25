@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /php/
+Disallow: /database/
+Disallow: /assets/docs/
+
+# Allow important assets
+Allow: /assets/images/
+Allow: /css/
+Allow: /javascript/
+
+# Crawl delay for performance
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://shreyaghimire.com/sitemap.xml
